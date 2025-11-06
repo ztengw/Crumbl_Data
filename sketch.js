@@ -215,7 +215,7 @@ function draw() {
 
   // clickBoard();
   biscuits();
-  // hover();
+  hover();
 
   console.log(mouseX, mouseY);
 
@@ -224,6 +224,9 @@ function draw() {
 //////  End of Draw  ///////
 
 function mousePressed(){
+  noFill();
+  strokeWeight(20);
+  stroke(255, 167, 197);
 
     if(
     mouseX > 70 &&
@@ -234,6 +237,7 @@ function mousePressed(){
   ){
       console.log("hi")
     headerID = 0;
+
   } if (
     mouseX > 215 &&
     mouseX < 345 &&
@@ -245,7 +249,7 @@ function mousePressed(){
   } if (
     mouseX > 360 &&
     mouseX < 490 &&
-    mouseY > 110 &&
+    mouseY > 110 && 
     mouseY < 250 &&
     mouseIsPressed 
   ){
@@ -473,259 +477,223 @@ function mousePressed(){
 }
   //////  End of Mousepressed //////
 
-//   function hover(){
+  function hover(){
+      fill(255, 167, 197, 170);
+    if(
+    mouseX > 70 &&
+    mouseX < 200 &&
+    mouseY > 110 &&
+    mouseY < 250   
+  ){
+    rect(70, 110, 125, 140, 20);
 
-//     if(
-//     mouseX > 70 &&
-//     mouseX < 200 &&
-//     mouseY > 110 &&
-//     mouseY < 250   
-//   ){
-//     fill(255, 185, 205, 20);
-//     rect(70, 110, 125, 140, 20);
-//    image(img1, 75, 120, 115, 115);
-
-    
-//   } if (
-//     mouseX > 215 &&
-//     mouseX < 345 &&
-//     mouseY > 110 &&
-//     mouseY < 250 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 1;
-//   } if (
-//     mouseX > 360 &&
-//     mouseX < 490 &&
-//     mouseY > 110 &&
-//     mouseY < 250 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 2;
-//   } if (
-//     mouseX > 505 &&
-//     mouseX < 625 &&
-//     mouseY > 110 &&
-//     mouseY < 250 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 3;
-//   } if (
-//     mouseX > 650 &&
-//     mouseX < 770 &&
-//     mouseY > 110 &&
-//     mouseY < 250 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 4;
-//   } if (
-//     mouseX > 800 &&
-//     mouseX < 920 &&
-//     mouseY > 110 &&
-//     mouseY < 250 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 5;
-//   } if(
-//     mouseX > 70 &&
-//     mouseX < 200 &&
-//     mouseY > 280 &&
-//     mouseY < 420 && 
-//     mouseIsPressed   
-//   ){
-//       console.log("hi")
-//     headerID = 6;
-//   } if (
-//     mouseX > 215 &&
-//     mouseX < 345 &&
-//     mouseY > 280 &&
-//     mouseY < 420 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 7;
-//   } if (
-//     mouseX > 360 &&
-//     mouseX < 490 &&
-//     mouseY > 280 &&
-//     mouseY < 420 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 8;
-//   } if (
-//     mouseX > 505 &&
-//     mouseX < 625 &&
-//     mouseY > 280 &&
-//     mouseY < 420 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 9;
-//   } if (
-//     mouseX > 650 &&
-//     mouseX < 770 &&
-//     mouseY > 280 &&
-//     mouseY < 420 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 10;
-//   } if (
-//     mouseX > 800 &&
-//     mouseX < 920 &&
-//     mouseY > 280 &&
-//     mouseY < 420 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 11;
-//   } if(
-//     mouseX > 70 &&
-//     mouseX < 200 &&
-//     mouseY > 445 &&
-//     mouseY < 595 && 
-//     mouseIsPressed   
-//   ){
-//       console.log("hi")
-//     headerID = 12;
-//   } if (
-//     mouseX > 215 &&
-//     mouseX < 345 &&
-//     mouseY > 445 &&
-//     mouseY < 595 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 13;
-//   } if (
-//     mouseX > 360 &&
-//     mouseX < 490 &&
-//     mouseY > 445 &&
-//     mouseY < 595 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 14;
-//   } if (
-//     mouseX > 505 &&
-//     mouseX < 625 &&
-//     mouseY > 445 &&
-//     mouseY < 595 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 15;
-//   } if (
-//     mouseX > 650 &&
-//     mouseX < 770 &&
-//     mouseY > 445 &&
-//     mouseY < 595 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 16;
-//   } if (
-//     mouseX > 800 &&
-//     mouseX < 920 &&
-//     mouseY > 445 &&
-//     mouseY < 595 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 17;
-//   } if(
-//     mouseX > 70 &&
-//     mouseX < 200 &&
-//     mouseY > 620 &&
-//     mouseY < 755 && 
-//     mouseIsPressed   
-//   ){
-//       console.log("hi")
-//     headerID = 18;
-//   } if (
-//     mouseX > 215 &&
-//     mouseX < 345 &&
-//     mouseY > 620 &&
-//     mouseY < 755 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 19;
-//   } if (
-//     mouseX > 360 &&
-//     mouseX < 490 &&
-//     mouseY > 620 &&
-//     mouseY < 755 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 20;
-//   } if (
-//     mouseX > 505 &&
-//     mouseX < 625 &&
-//     mouseY > 620 &&
-//     mouseY < 755 &&
-//     mouseIsPressed 
-//   ){
-//     headerID =21;
-//   } if (
-//     mouseX > 650 &&
-//     mouseX < 770 &&
-//     mouseY > 620 &&
-//     mouseY < 755 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 22;
-//   } if (
-//     mouseX > 800 &&
-//     mouseX < 920 &&
-//     mouseY > 620 &&
-//     mouseY < 755 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 23;
-//   } if(
-//     mouseX > 70 &&
-//     mouseX < 200 &&
-//     mouseY > 790 &&
-//     mouseY < 930 && 
-//     mouseIsPressed   
-//   ){
-//     headerID = 24;
-//   } if (
-//     mouseX > 215 &&
-//     mouseX < 345 &&
-//     mouseY > 790 &&
-//     mouseY < 930 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 25;
-//   } if (
-//     mouseX > 360 &&
-//     mouseX < 490 &&
-//     mouseY > 790 &&
-//     mouseY < 930 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 26;
-//   } if (
-//     mouseX > 505 &&
-//     mouseX < 625 &&
-//     mouseY > 790 &&
-//     mouseY < 930 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 27;
-//   } if (
-//     mouseX > 650 &&
-//     mouseX < 770 &&
-//     mouseY > 790 &&
-//     mouseY < 930 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 28;
-//   } if (
-//     mouseX > 800 &&
-//     mouseX < 920 &&
-//     mouseY > 790 &&
-//     mouseY < 930 &&
-//     mouseIsPressed 
-//   ){
-//     headerID = 29;
-//   } 
+  } if (
+    mouseX > 215 &&
+    mouseX < 345 &&
+    mouseY > 110 &&
+    mouseY < 250 
+  ){
+    rect(215, 110, 125, 140, 20); 
+  } if (
+    mouseX > 360 &&
+    mouseX < 490 &&
+    mouseY > 110 &&
+    mouseY < 250  
+  ){
+    rect(360, 110, 125, 140, 20);
+  } if (
+    mouseX > 505 &&
+    mouseX < 625 &&
+    mouseY > 110 &&
+    mouseY < 250  
+  ){
+    rect(505, 110, 125, 140, 20);
+  } if (
+    mouseX > 650 &&
+    mouseX < 770 &&
+    mouseY > 110 &&
+    mouseY < 250  
+  ){
+    rect(650, 110, 125, 140, 20);
+  } if (
+    mouseX > 800 &&
+    mouseX < 920 &&
+    mouseY > 110 &&
+    mouseY < 250  
+  ){
+    rect(795, 110, 125, 140, 20);
+  } if(
+    mouseX > 70 &&
+    mouseX < 200 &&
+    mouseY > 280 &&
+    mouseY < 420    
+  ){
+    rect(70, 280, 125, 140, 20);
+  } if (
+    mouseX > 215 &&
+    mouseX < 345 &&
+    mouseY > 280 &&
+    mouseY < 420  
+  ){
+    rect(215, 280, 125, 140, 20);
+  } if (
+    mouseX > 360 &&
+    mouseX < 490 &&
+    mouseY > 280 &&
+    mouseY < 420  
+  ){
+    rect(360, 280, 125, 140, 20); 
+  } if (
+    mouseX > 505 &&
+    mouseX < 625 &&
+    mouseY > 280 &&
+    mouseY < 420  
+  ){
+    rect(505, 280, 125, 140, 20);
+  } if (
+    mouseX > 650 &&
+    mouseX < 770 &&
+    mouseY > 280 &&
+    mouseY < 420 
+  ){
+    rect(650, 280, 125, 140, 20); 
+  } if (
+    mouseX > 800 &&
+    mouseX < 920 &&
+    mouseY > 280 &&
+    mouseY < 420  
+  ){
+    rect(795, 280, 125, 140, 20);
+  } if(
+    mouseX > 70 &&
+    mouseX < 200 &&
+    mouseY > 445 &&
+    mouseY < 595    
+  ){
+    rect(70, 450, 125, 140, 20);
+  } if (
+    mouseX > 215 &&
+    mouseX < 345 &&
+    mouseY > 445 &&
+    mouseY < 595  
+  ){
+    rect(215, 450, 125, 140, 20);  
+  } if (
+    mouseX > 360 &&
+    mouseX < 490 &&
+    mouseY > 445 &&
+    mouseY < 595  
+  ){
+    rect(360, 450, 125, 140, 20);
+  } if (
+    mouseX > 505 &&
+    mouseX < 625 &&
+    mouseY > 445 &&
+    mouseY < 595  
+  ){
+    rect(505, 450, 125, 140, 20);
+  } if (
+    mouseX > 650 &&
+    mouseX < 770 &&
+    mouseY > 445 &&
+    mouseY < 595  
+  ){
+    rect(650, 450, 125, 140, 20);
+  } if (
+    mouseX > 800 &&
+    mouseX < 920 &&
+    mouseY > 445 &&
+    mouseY < 595 
+  ){
+    rect(795, 450, 125, 140, 20); 
+  } if(
+    mouseX > 70 &&
+    mouseX < 200 &&
+    mouseY > 620 &&
+    mouseY < 755    
+  ){
+    rect(70, 620, 125, 140, 20);
+  } if (
+    mouseX > 215 &&
+    mouseX < 345 &&
+    mouseY > 620 &&
+    mouseY < 755 
+  ){
+    rect(215, 620, 125, 140, 20); 
+  } if (
+    mouseX > 360 &&
+    mouseX < 490 &&
+    mouseY > 620 &&
+    mouseY < 755  
+  ){
+    rect(360, 620, 125, 140, 20);
+  } if (
+    mouseX > 505 &&
+    mouseX < 625 &&
+    mouseY > 620 &&
+    mouseY < 755  
+  ){
+    rect(505, 620, 125, 140, 20);
+  } if (
+    mouseX > 650 &&
+    mouseX < 770 &&
+    mouseY > 620 &&
+    mouseY < 755  
+  ){
+        rect(650, 620, 125, 140, 20); 
+  } if (
+    mouseX > 800 &&
+    mouseX < 920 &&
+    mouseY > 620 &&
+    mouseY < 755 
+  ){
+    rect(795, 620, 125, 140, 20); 
+  } if(
+    mouseX > 70 &&
+    mouseX < 200 &&
+    mouseY > 790 &&
+    mouseY < 930   
+  ){
+    rect(70, 790, 125, 140, 20);
+  } if (
+    mouseX > 215 &&
+    mouseX < 345 &&
+    mouseY > 790 &&
+    mouseY < 930  
+  ){
+    rect(215, 790, 125, 140, 20);
+  } if (
+    mouseX > 360 &&
+    mouseX < 490 &&
+    mouseY > 790 &&
+    mouseY < 930
+  ){
+    rect(360, 790, 125, 140, 20);
+  } if (
+    mouseX > 505 &&
+    mouseX < 625 &&
+    mouseY > 790 &&
+    mouseY < 930  
+  ){
+    rect(505, 790, 125, 140, 20);
+  } if (
+    mouseX > 650 &&
+    mouseX < 770 &&
+    mouseY > 790 &&
+    mouseY < 930  
+  ){
+    rect(650, 790, 125, 140, 20);
+  } if (
+    mouseX > 800 &&
+    mouseX < 920 &&
+    mouseY > 790 &&
+    mouseY < 930  
+  ){
+    rect(795, 790, 125, 140, 20); 
+  } 
 
 
-// }
-// }
+}
 //////  End of Hover  //////
 
 function biscuits(){
